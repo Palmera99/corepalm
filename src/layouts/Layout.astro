@@ -1,0 +1,56 @@
+---
+// Layout.astro - Main Layout with SEO & Design System
+import TopBar from '../components/TopBar.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+import SuccessModal from '../components/SuccessModal.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "CorePalm Soluciones | Tecnología, Seguridad e Infraestructura para Empresas",
+  description = "CorePalm Soluciones - Más de 5 años de experiencia brindando desarrollo de software a medida, instalación de cámaras de seguridad CCTV, infraestructura de red y soporte de hardware para empresas."
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={description}>
+  <meta name="keywords" content="CorePalm Soluciones, desarrollo de software, cámaras de seguridad, CCTV, redes de datos, cableado estructurado, soporte técnico, mantenimiento de hardware, tecnología corporativa">
+  <meta name="author" content="CorePalm Soluciones">
+  
+  <!-- OpenGraph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:site_name" content="CorePalm Soluciones">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title}</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <TopBar />
+  <Header />
+
+  <main>
+    <slot />
+  </main>
+
+  <SuccessModal />
+  <FloatingWhatsApp />
+  <Footer />
+</body>
+</html>

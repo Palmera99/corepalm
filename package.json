@@ -1,0 +1,19 @@
+{
+  "name": "corepalm-soluciones",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Sitio web corporativo y tarjeta de presentación de CorePalm Soluciones construido con Astro.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0"
+  }
+}

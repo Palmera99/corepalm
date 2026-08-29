@@ -1,0 +1,365 @@
+---
+// Hero.astro - Main Hero Section
+---
+<section class="hero" id="hero">
+  <div class="container hero__container">
+    <div class="hero__content">
+      <!-- Trust Badge -->
+      <div class="trust-badge">
+        <span class="trust-badge__icon">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </span>
+        <span class="trust-badge__text">Más de 5 años impulsando la tecnología de empresas</span>
+      </div>
+
+      <h1 class="hero__title">
+        Soluciones Tecnológicas Integrales para Proteger y Potenciar tu Negocio
+      </h1>
+
+      <p class="hero__subtitle">
+        Especialistas en <strong>desarrollo de software a medida</strong>, <strong>sistemas de seguridad CCTV</strong>, <strong>infraestructura de redes</strong> y <strong>soporte integral de hardware</strong>. Más de 5 años brindando estabilidad, confianza y continuidad operativa a empresas e instituciones.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#cotizacion" class="btn btn--primary btn--lg">
+          <span>Solicita tu Cotización</span>
+          <svg class="icon btn__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="#servicios" class="btn btn--outline btn--lg">
+          <span>Ver Nuestros Servicios</span>
+        </a>
+      </div>
+
+      <div class="hero__guarantees">
+        <div class="guarantee-item">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>Respuesta en menos de 2h</span>
+        </div>
+        <div class="guarantee-item">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>Garantía técnica por escrito</span>
+        </div>
+        <div class="guarantee-item">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>Asesoría personalizada</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="hero-card hero-card--main">
+        <div class="hero-card__header">
+          <div class="hero-card__badge">Arquitectura & Servicios TI</div>
+          <div class="hero-card__status">
+            <span class="status-dot"></span> 100% Operativo
+          </div>
+        </div>
+
+        <div class="hero-card__grid">
+          <div class="hero-mini-card">
+            <div class="hero-mini-card__icon hero-mini-card__icon--software">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <div class="hero-mini-card__data">
+              <strong>Software a Medida</strong>
+              <span>Sistemas escalables y web</span>
+            </div>
+          </div>
+
+          <div class="hero-mini-card">
+            <div class="hero-mini-card__icon hero-mini-card__icon--cctv">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 7l-7 5 7 5V7z"></path>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+              </svg>
+            </div>
+            <div class="hero-mini-card__data">
+              <strong>CCTV & Seguridad</strong>
+              <span>Monitoreo HD & IP remoto</span>
+            </div>
+          </div>
+
+          <div class="hero-mini-card">
+            <div class="hero-mini-card__icon hero-mini-card__icon--network">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </div>
+            <div class="hero-mini-card__data">
+              <strong>Redes & Cableado</strong>
+              <span>Fibra, racks y Wi-Fi pro</span>
+            </div>
+          </div>
+
+          <div class="hero-mini-card">
+            <div class="hero-mini-card__icon hero-mini-card__icon--hardware">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div class="hero-mini-card__data">
+              <strong>Soporte & Hardware</strong>
+              <span>Mantenimiento y diagnóstico</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card__footer">
+          <div class="hero-experience-banner">
+            <div class="exp-badge">+5</div>
+            <div class="exp-text">
+              <strong>Años de Trayectoria Continua</strong>
+              <p>Solidez técnica comprobada en proyectos empresariales</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-50) 100%);
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-12);
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .hero__container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  .trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--color-accent-amber-light);
+    color: #92400e;
+    padding: 0.4rem 0.95rem;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: var(--space-5);
+    border: 1px solid rgba(217, 119, 6, 0.25);
+  }
+
+  .trust-badge__icon {
+    display: flex;
+    color: var(--color-accent-amber);
+  }
+
+  .hero__title {
+    font-size: clamp(2.2rem, 4vw, 3.1rem);
+    line-height: 1.16;
+    margin-bottom: var(--space-5);
+    color: var(--color-dark-900);
+  }
+
+  .hero__subtitle {
+    font-size: 1.12rem;
+    line-height: 1.65;
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-8);
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+  }
+
+  .hero__guarantees {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-gray-200);
+  }
+
+  .guarantee-item {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-dark-700);
+  }
+
+  /* Hero Visual Card */
+  .hero-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    padding: var(--space-6);
+    position: relative;
+  }
+
+  .hero-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--space-4);
+    margin-bottom: var(--space-5);
+    border-bottom: 1px solid var(--color-gray-100);
+  }
+
+  .hero-card__badge {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-primary-600);
+    letter-spacing: 0.05em;
+  }
+
+  .hero-card__status {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accent-emerald);
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-accent-emerald);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--color-accent-emerald-light);
+    animation: pulseDot 2s infinite;
+  }
+
+  @keyframes pulseDot {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(5, 150, 105, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
+  }
+
+  .hero-card__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+
+  .hero-mini-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    background-color: var(--color-gray-50);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+  }
+
+  .hero-mini-card:hover {
+    background-color: var(--color-white);
+    border-color: var(--color-primary-400);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .hero-mini-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+  }
+
+  .hero-mini-card__icon--software { background-color: #eff6ff; color: #2563eb; }
+  .hero-mini-card__icon--cctv { background-color: #fef2f2; color: #dc2626; }
+  .hero-mini-card__icon--network { background-color: #ecfdf5; color: #059669; }
+  .hero-mini-card__icon--hardware { background-color: #fefce8; color: #d97706; }
+
+  .hero-mini-card__data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-mini-card__data strong {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  .hero-mini-card__data span {
+    font-size: 0.73rem;
+    color: var(--color-gray-500);
+  }
+
+  .hero-experience-banner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    background: linear-gradient(135deg, var(--color-primary-800) 0%, var(--color-primary-700) 100%);
+    padding: var(--space-4) var(--space-5);
+    border-radius: var(--radius-md);
+    color: var(--color-white);
+  }
+
+  .exp-badge {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #fbbf24;
+  }
+
+  .exp-text strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--color-white);
+    margin-bottom: 2px;
+  }
+
+  .exp-text p {
+    font-size: 0.78rem;
+    color: var(--color-gray-300);
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .hero__container {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero__actions {
+      flex-direction: column;
+    }
+    .hero__actions .btn {
+      width: 100%;
+    }
+  }
+</style>

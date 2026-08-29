@@ -1,0 +1,195 @@
+---
+// FAQ.astro - Interactive Questions & Answers
+---
+<section class="section faq" id="faq">
+  <div class="container container--narrow">
+    <div class="section-header text-center">
+      <div class="section-tag">Preguntas Frecuentes</div>
+      <h2 class="section-title">Resolvemos sus Dudas Técnicas y Comerciales</h2>
+      <p class="section-subtitle">
+        Transparencia y claridad en cada etapa de su proyecto.
+      </p>
+    </div>
+
+    <div class="faq__accordion" id="faq-accordion">
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <button class="faq-item__header" aria-expanded="false">
+          <span class="faq-item__question">¿Cuánto tiempo tardan en entregar una cotización?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+        <div class="faq-item__body">
+          <p>Para servicios estándar de soporte, mantenimiento o hardware, respondemos en un plazo máximo de <strong>2 a 4 horas hábiles</strong>. Para proyectos de mayor envergadura (instalación completa de CCTV, cableado estructurado de plantas o desarrollo de software), coordinamos una visita técnica o reunión de requerimientos y entregamos la propuesta formal en <strong>24 a 48 horas</strong>.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <button class="faq-item__header" aria-expanded="false">
+          <span class="faq-item__question">¿Realizan visitas técnicas previas para evaluar instalaciones de CCTV o Redes?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+        <div class="faq-item__body">
+          <p><strong>Sí, totalmente.</strong> Para garantizar que la cantidad de cámaras, ángulos de visión, tipo de cableado y equipos activos sean exactamente los adecuados para sus instalaciones, coordinamos una inspección presencial o levantamiento de información detallado.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <button class="faq-item__header" aria-expanded="false">
+          <span class="faq-item__question">¿Cómo se garantiza el correcto funcionamiento del software a medida?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+        <div class="faq-item__body">
+          <p>Trabajamos mediante metodologías con entregas por etapas (sprints). Cada módulo pasa por rigurosas pruebas de funcionalidad, seguridad y compatibilidad antes de su despliegue final. Además, incluimos un período de garantía post-lanzamiento para ajustes y soporte de estabilización sin costo extra.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <button class="faq-item__header" aria-expanded="false">
+          <span class="faq-item__question">¿Ofrecen contratos mensuales de mantenimiento y soporte informático?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+        <div class="faq-item__body">
+          <p><strong>Sí.</strong> Contamos con planes y pólizas mensuales diseñadas para empresas y oficinas que requieren soporte técnico preventivo, monitoreo de redes, mantenimiento de cámaras y asistencia técnica prioritaria tanto remota como presencial.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+        <button class="faq-item__header" aria-expanded="false">
+          <span class="faq-item__question">¿Qué garantía tienen las instalaciones y equipos suministrados?</span>
+          <span class="faq-item__toggle">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+        <div class="faq-item__body">
+          <p>Todos los equipos de hardware (cámaras, NVRs, switches, routers, componentes) cuentan con la garantía oficial de fábrica del fabricante (1 a 3 años según marca). Por su parte, la mano de obra, cableado e instalación técnica ejecutada por CorePalm Soluciones cuenta con nuestra garantía directa por escrito.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    background-color: var(--color-gray-50);
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .faq__accordion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .faq-item {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: border-color var(--transition-fast);
+  }
+
+  .faq-item:hover {
+    border-color: var(--color-gray-300);
+  }
+
+  .faq-item.active {
+    border-color: var(--color-primary-400);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .faq-item__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-5) var(--space-6);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .faq-item__question {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-dark-900);
+  }
+
+  .faq-item__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: var(--color-gray-500);
+    transition: transform var(--transition-base), color var(--transition-fast);
+    flex-shrink: 0;
+    margin-left: var(--space-4);
+  }
+
+  .faq-item.active .faq-item__toggle {
+    transform: rotate(180deg);
+    color: var(--color-primary-600);
+  }
+
+  .faq-item__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-smooth);
+  }
+
+  .faq-item.active .faq-item__body {
+    max-height: 350px;
+  }
+
+  .faq-item__body p {
+    padding: 0 var(--space-6) var(--space-5) var(--space-6);
+    font-size: 0.94rem;
+    color: var(--color-gray-600);
+    line-height: 1.65;
+    margin: 0;
+  }
+</style>
+
+<script>
+  // FAQ accordion client logic
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const headerBtn = item.querySelector('.faq-item__header');
+    if (!headerBtn) return;
+
+    headerBtn.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          const btn = otherItem.querySelector('.faq-item__header');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      if (isActive) {
+        item.classList.remove('active');
+        headerBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('active');
+        headerBtn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>

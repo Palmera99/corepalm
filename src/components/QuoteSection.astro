@@ -1,0 +1,592 @@
+---
+// QuoteSection.astro - Interactive Quotation Form & Direct Contact Panel
+---
+<section class="section quote-section" id="cotizacion">
+  <div class="container">
+    <div class="quote-wrapper">
+      <!-- Left Column: Form -->
+      <div class="quote-card">
+        <div class="quote-card__header">
+          <div class="section-tag section-tag--light">Cotización Online Rápida</div>
+          <h2 class="quote-card__title">Solicita tu Cotización Personalizada</h2>
+          <p class="quote-card__subtitle">
+            Completa los datos de tu requerimiento y nuestros especialistas técnicos te enviarán una propuesta detallada y ajustada a tu medida en tiempo récord.
+          </p>
+        </div>
+
+        <form class="quote-form" id="quote-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Nombre Completo o Empresa <span class="required">*</span></label>
+              <div class="input-wrapper">
+                <svg class="input-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <input type="text" id="form-name" name="name" class="form-control" placeholder="Ej. Juan Pérez / Empresa S.A." required>
+              </div>
+              <span class="form-error" id="error-name">Por favor ingresa tu nombre o empresa</span>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Correo Electrónico <span class="required">*</span></label>
+              <div class="input-wrapper">
+                <svg class="input-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <input type="email" id="form-email" name="email" class="form-control" placeholder="nombre@empresa.com" required>
+              </div>
+              <span class="form-error" id="error-email">Por favor ingresa un correo electrónico válido</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-phone" class="form-label">Teléfono o WhatsApp <span class="required">*</span></label>
+              <div class="input-wrapper">
+                <svg class="input-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <input type="tel" id="form-phone" name="phone" class="form-control" placeholder="+56 9 1234 5678" required>
+              </div>
+              <span class="form-error" id="error-phone">Por favor ingresa un número de contacto válido</span>
+            </div>
+
+            <div class="form-group">
+              <label for="form-service" class="form-label">Tipo de Servicio Requerido <span class="required">*</span></label>
+              <div class="input-wrapper">
+                <svg class="input-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <select id="form-service" name="service" class="form-control" required>
+                  <option value="" disabled selected>Selecciona una opción...</option>
+                  <option value="software">1. Desarrollo de Software y Soluciones a Medida</option>
+                  <option value="cctv">2. Sistemas de Cámaras de Seguridad (CCTV)</option>
+                  <option value="redes">3. Infraestructura y Cableado de Red</option>
+                  <option value="hardware">4. Soporte Técnico y Mantenimiento de Hardware</option>
+                  <option value="integral">5. Proyecto Integral Multidisciplinario</option>
+                </select>
+              </div>
+              <span class="form-error" id="error-service">Por favor selecciona un servicio</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="form-message" class="form-label">Descripción del Proyecto o Necesidad <span class="required">*</span></label>
+            <div class="input-wrapper input-wrapper--textarea">
+              <textarea id="form-message" name="message" class="form-control" rows="4" placeholder="Describe brevemente tus requerimientos: número de cámaras, metros aproximados de red, alcance del software, problemas de hardware, plazos estimados, etc." required></textarea>
+            </div>
+            <span class="form-error" id="error-message">Por favor describe brevemente tus necesidades</span>
+          </div>
+
+          <div class="form-footer">
+            <button type="submit" class="btn btn--primary btn--lg btn--block" id="btn-submit">
+              <span class="btn-text">Enviar Solicitud de Cotización</span>
+              <svg class="icon btn__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+            <p class="form-privacy">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              Tus datos están protegidos. Respuesta garantizada en menos de 2 horas hábiles.
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right Column: Direct Contact & Location Info -->
+      <div class="contact-info-panel">
+        <div class="contact-info-panel__header">
+          <span class="badge-accent">Atención Inmediata</span>
+          <h3 class="contact-info-panel__title">Canales Directos de Contacto</h3>
+          <p class="contact-info-panel__desc">
+            ¿Prefieres comunicarte directamente con nosotros o necesitas atención urgente? Contáctanos a través de cualquiera de nuestros canales oficiales.
+          </p>
+        </div>
+
+        <div class="contact-cards">
+          <!-- Contact Item 1: Phone / WhatsApp -->
+          <a href="https://wa.me/56912345678?text=Hola%20CorePalm%20Soluciones,%20deseo%20solicitar%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-card__icon contact-card__icon--whatsapp">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </div>
+            <div class="contact-card__details">
+              <span class="contact-card__label">Teléfono & WhatsApp Corporativo</span>
+              <strong class="contact-card__value">+56 9 1234 5678</strong>
+              <span class="contact-card__hint">Clic para chatear directamente</span>
+            </div>
+          </a>
+
+          <!-- Contact Item 2: Email -->
+          <a href="mailto:contacto@corepalm.com" class="contact-card">
+            <div class="contact-card__icon contact-card__icon--email">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-card__details">
+              <span class="contact-card__label">Correo Institucional</span>
+              <strong class="contact-card__value">contacto@corepalm.com</strong>
+              <span class="contact-card__hint">Atención comercial y propuestas</span>
+            </div>
+          </a>
+
+          <!-- Contact Item 3: Coverage Area -->
+          <div class="contact-card contact-card--static">
+            <div class="contact-card__icon contact-card__icon--location">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="contact-card__details">
+              <span class="contact-card__label">Área de Cobertura y Ubicación</span>
+              <strong class="contact-card__value">Región Metropolitana y Alrededores</strong>
+              <span class="contact-card__hint">Servicios presenciales y soporte remoto nacional</span>
+            </div>
+          </div>
+
+          <!-- Contact Item 4: Operating Hours -->
+          <div class="contact-card contact-card--static">
+            <div class="contact-card__icon contact-card__icon--hours">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="contact-card__details">
+              <span class="contact-card__label">Horario de Atención</span>
+              <strong class="contact-card__value">Lunes a Viernes: 08:30 - 18:30</strong>
+              <span class="contact-card__hint">Sábados: 09:00 - 14:00 | Emergencias 24/7 con póliza</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-info-panel__footer">
+          <div class="guarantee-box">
+            <div class="guarantee-box__icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="guarantee-box__text">
+              <strong>Compromiso CorePalm</strong>
+              <span>Asesoría transparente, seriedad contractual y satisfacción garantizada.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .quote-section {
+    background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-50) 100%);
+    position: relative;
+  }
+
+  .quote-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--space-10);
+    align-items: flex-start;
+  }
+
+  .quote-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-xl);
+    padding: var(--space-10);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .quote-card__header {
+    margin-bottom: var(--space-8);
+  }
+
+  .quote-card__title {
+    font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-3);
+  }
+
+  .quote-card__subtitle {
+    font-size: 0.98rem;
+    color: var(--color-gray-600);
+    margin: 0;
+  }
+
+  .quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .form-label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-dark-800);
+  }
+
+  .required {
+    color: #dc2626;
+  }
+
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--color-gray-400);
+    pointer-events: none;
+    transition: color var(--transition-fast);
+  }
+
+  .input-wrapper--textarea .input-icon {
+    top: 14px;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.65rem;
+    background-color: var(--color-gray-50);
+    border: 1.5px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    color: var(--color-dark-900);
+    font-size: 0.94rem;
+    transition: all var(--transition-fast);
+  }
+
+  .input-wrapper--textarea textarea.form-control {
+    padding-left: 1rem;
+    resize: vertical;
+    min-height: 110px;
+  }
+
+  .form-control:hover {
+    border-color: var(--color-gray-300);
+  }
+
+  .form-control:focus {
+    outline: none;
+    background-color: var(--color-white);
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  }
+
+  select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 2.5rem;
+  }
+
+  .form-error {
+    font-size: 0.78rem;
+    color: #dc2626;
+    display: none;
+  }
+
+  :global(.form-group.has-error) .form-control {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+  }
+
+  :global(.form-group.has-error) .form-error {
+    display: block;
+  }
+
+  .form-footer {
+    margin-top: var(--space-4);
+  }
+
+  .form-privacy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--color-gray-500);
+    margin-top: var(--space-4);
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .contact-info-panel {
+    background-color: var(--color-primary-900);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    color: var(--color-white);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .badge-accent {
+    display: inline-block;
+    background-color: rgba(37, 99, 235, 0.25);
+    color: #93c5fd;
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-3);
+  }
+
+  .contact-info-panel__title {
+    color: var(--color-white);
+    font-size: 1.55rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .contact-info-panel__desc {
+    font-size: 0.92rem;
+    color: var(--color-gray-300);
+    margin-bottom: var(--space-6);
+    line-height: 1.55;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--space-4) var(--space-5);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+  }
+
+  a.contact-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateX(4px);
+  }
+
+  .contact-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    flex-shrink: 0;
+  }
+
+  .contact-card__icon--whatsapp { background-color: rgba(37, 211, 102, 0.15); color: #25d366; }
+  .contact-card__icon--email { background-color: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+  .contact-card__icon--location { background-color: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+  .contact-card__icon--hours { background-color: rgba(168, 85, 247, 0.15); color: #c084fc; }
+
+  .contact-card__details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-card__label {
+    font-size: 0.75rem;
+    color: var(--color-gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .contact-card__value {
+    font-size: 1rem;
+    color: var(--color-white);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .contact-card__hint {
+    font-size: 0.76rem;
+    color: var(--color-gray-400);
+  }
+
+  .contact-info-panel__footer {
+    padding-top: var(--space-4);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .guarantee-box {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .guarantee-box__icon {
+    display: flex;
+    color: #60a5fa;
+    flex-shrink: 0;
+  }
+
+  .guarantee-box__text strong {
+    display: block;
+    font-size: 0.88rem;
+    color: var(--color-white);
+  }
+
+  .guarantee-box__text span {
+    font-size: 0.78rem;
+    color: var(--color-gray-400);
+  }
+
+  @media (max-width: 1024px) {
+    .quote-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+    .quote-card {
+      padding: var(--space-6);
+    }
+  }
+</style>
+
+<script>
+  // Service quote triggers and form validation logic
+  const serviceQuoteButtons = document.querySelectorAll('.js-quote-service');
+  const serviceSelect = document.getElementById('form-service') as HTMLSelectElement | null;
+  const quoteForm = document.getElementById('quote-form') as HTMLFormElement | null;
+  const btnSubmit = document.getElementById('btn-submit') as HTMLButtonElement | null;
+  const successModal = document.getElementById('success-modal');
+  const modalSummary = document.getElementById('modal-summary');
+
+  serviceQuoteButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const serviceValue = button.getAttribute('data-service-value');
+      
+      const quoteSection = document.getElementById('cotizacion');
+      if (quoteSection) {
+        const headerOffset = 80;
+        const elementPosition = quoteSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+
+      if (serviceSelect && serviceValue) {
+        serviceSelect.value = serviceValue;
+        serviceSelect.focus();
+        serviceSelect.style.borderColor = 'var(--color-primary-500)';
+        serviceSelect.style.boxShadow = '0 0 0 4px rgba(37, 99, 235, 0.25)';
+
+        setTimeout(() => {
+          serviceSelect.style.borderColor = '';
+          serviceSelect.style.boxShadow = '';
+        }, 1800);
+      }
+    });
+  });
+
+  if (quoteForm) {
+    const nameInput = document.getElementById('form-name') as HTMLInputElement;
+    const emailInput = document.getElementById('form-email') as HTMLInputElement;
+    const phoneInput = document.getElementById('form-phone') as HTMLInputElement;
+    const messageInput = document.getElementById('form-message') as HTMLTextAreaElement;
+
+    const validateEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email).toLowerCase());
+
+    const validateField = (input: HTMLElement, isValid: boolean) => {
+      const formGroup = input.closest('.form-group');
+      if (!formGroup) return;
+      if (!isValid) formGroup.classList.add('has-error');
+      else formGroup.classList.remove('has-error');
+    };
+
+    nameInput?.addEventListener('blur', () => validateField(nameInput, nameInput.value.trim().length >= 2));
+    emailInput?.addEventListener('blur', () => validateField(emailInput, validateEmail(emailInput.value.trim())));
+    phoneInput?.addEventListener('blur', () => validateField(phoneInput, phoneInput.value.trim().length >= 6));
+    serviceSelect?.addEventListener('change', () => validateField(serviceSelect, serviceSelect.value !== ''));
+    messageInput?.addEventListener('blur', () => validateField(messageInput, messageInput.value.trim().length >= 8));
+
+    quoteForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const isNameValid = nameInput.value.trim().length >= 2;
+      const isEmailValid = validateEmail(emailInput.value.trim());
+      const isPhoneValid = phoneInput.value.trim().length >= 6;
+      const isServiceValid = (serviceSelect?.value || '') !== '';
+      const isMessageValid = messageInput.value.trim().length >= 8;
+
+      validateField(nameInput, isNameValid);
+      validateField(emailInput, isEmailValid);
+      validateField(phoneInput, isPhoneValid);
+      if (serviceSelect) validateField(serviceSelect, isServiceValid);
+      validateField(messageInput, isMessageValid);
+
+      if (!isNameValid || !isEmailValid || !isPhoneValid || !isServiceValid || !isMessageValid) {
+        if (!isNameValid) nameInput.focus();
+        else if (!isEmailValid) emailInput.focus();
+        else if (!isPhoneValid) phoneInput.focus();
+        else if (!isServiceValid) serviceSelect?.focus();
+        else if (!isMessageValid) messageInput.focus();
+        return;
+      }
+
+      if (btnSubmit) {
+        const originalBtnHTML = btnSubmit.innerHTML;
+        btnSubmit.disabled = true;
+        btnSubmit.innerHTML = `<span>Procesando Solicitud...</span>`;
+
+        setTimeout(() => {
+          const serviceNames: Record<string, string> = {
+            'software': 'Desarrollo de Software y Soluciones a Medida',
+            'cctv': 'Sistemas de Cámaras de Seguridad (CCTV)',
+            'redes': 'Infraestructura y Cableado de Red',
+            'hardware': 'Soporte Técnico y Hardware',
+            'integral': 'Proyecto Integral Multidisciplinario'
+          };
+
+          const selectedServiceName = serviceNames[serviceSelect?.value || ''] || 'Servicio Personalizado';
+
+          if (modalSummary) {
+            modalSummary.innerHTML = `
+              <div style="margin-bottom: 6px;"><strong>Solicitante:</strong> ${nameInput.value.trim()}</div>
+              <div style="margin-bottom: 6px;"><strong>Servicio:</strong> ${selectedServiceName}</div>
+              <div style="margin-bottom: 6px;"><strong>Contacto:</strong> ${emailInput.value.trim()} | ${phoneInput.value.trim()}</div>
+              <div style="font-size: 0.82rem; color: #64748b; margin-top: 8px;">Un asesor se comunicará contigo en menos de 2 horas hábiles.</div>
+            `;
+          }
+
+          if (successModal) {
+            successModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          }
+
+          quoteForm.reset();
+          btnSubmit.disabled = false;
+          btnSubmit.innerHTML = originalBtnHTML;
+        }, 800);
+      }
+    });
+  }
+</script>

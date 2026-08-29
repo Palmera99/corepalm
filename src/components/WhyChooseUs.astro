@@ -1,0 +1,151 @@
+---
+// WhyChooseUs.astro - Diferenciales y Garantías
+---
+<section class="section why-us" id="por-que-elegirnos">
+  <div class="container">
+    <div class="section-header text-center">
+      <div class="section-tag">Por Qué Elegirnos</div>
+      <h2 class="section-title">El Respaldo y la Seguridad de Elegir a Profesionales</h2>
+      <p class="section-subtitle">
+        Nuestros más de 5 años de trayectoria son el resultado de un trabajo riguroso, honesto y enfocado en entregar valor tangible a cada cliente.
+      </p>
+    </div>
+
+    <div class="why-us__grid">
+      <div class="why-card">
+        <div class="why-card__badge">+5 Años</div>
+        <div class="why-card__icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </div>
+        <h3 class="why-card__title">Experiencia Comprobada</h3>
+        <p class="why-card__text">
+          Más de 5 años resolviendo desafíos tecnológicos en diversos rubros. Sabemos exactamente qué funciona, evitando pérdidas de tiempo y costos innecesarios.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-card__badge">100% Calidad</div>
+        <div class="why-card__icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <h3 class="why-card__title">Garantía por Escrito</h3>
+        <p class="why-card__text">
+          Cada instalación, configuración o desarrollo cuenta con garantía formal de funcionamiento. Su inversión y continuidad de negocio están 100% protegidas.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-card__badge">Respuesta Rápida</div>
+        <div class="why-card__icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 14 14"></polyline>
+          </svg>
+        </div>
+        <h3 class="why-card__title">Atención y Tiempos Ágiles</h3>
+        <p class="why-card__text">
+          Entendemos que las fallas técnicas representan dinero perdido. Por ello, ofrecemos tiempos de respuesta prioritarios y resolución eficiente de incidencias.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-card__badge">A la Medida</div>
+        <div class="why-card__icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <h3 class="why-card__title">Asesoramiento Personalizado</h3>
+        <p class="why-card__text">
+          No creemos en soluciones genéricas. Nos sentamos con usted, escuchamos sus prioridades y diseñamos una propuesta adecuada a su escala y presupuesto.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-us {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .why-us__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+  }
+
+  .why-card {
+    background-color: var(--color-gray-50);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    position: relative;
+    transition: all var(--transition-fast);
+  }
+
+  .why-card:hover {
+    background-color: var(--color-white);
+    border-color: var(--color-primary-400);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .why-card__badge {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    background-color: var(--color-primary-50);
+    color: var(--color-primary-600);
+    border: 1px solid var(--color-primary-100);
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-full);
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+
+  .why-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    color: var(--color-primary-600);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-5);
+  }
+
+  .why-card__title {
+    font-size: 1.15rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .why-card__text {
+    font-size: 0.9rem;
+    color: var(--color-gray-600);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .why-us__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .why-us__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

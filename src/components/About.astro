@@ -1,0 +1,239 @@
+---
+// About.astro - About CorePalm Soluciones
+---
+<section class="section about" id="nosotros">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__content">
+        <div class="section-tag">Acerca de Nosotros</div>
+        <h2 class="section-title">
+          Experiencia Técnica, Confianza y Soluciones Sólidas para su Empresa
+        </h2>
+        <p class="about__lead">
+          En <strong>CorePalm Soluciones</strong> llevamos más de 5 años consolidándonos como un aliado tecnológico estratégico para empresas, comercios y particulares que buscan calidad, seguridad y eficiencia operativa.
+        </p>
+        <p class="about__text">
+          No nos limitamos a instalar equipos o escribir código: analizamos en profundidad las necesidades reales de su infraestructura para implementar soluciones robustas, escalables y con estándares profesionales de ingeniería.
+        </p>
+
+        <div class="about__features">
+          <div class="about-feature">
+            <div class="about-feature__icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h3 class="about-feature__title">Diagnóstico y Planificación Precisa</h3>
+              <p class="about-feature__desc">Evaluamos su entorno antes de proponer cualquier solución técnica, optimizando presupuestos y tiempos.</p>
+            </div>
+          </div>
+
+          <div class="about-feature">
+            <div class="about-feature__icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="about-feature__title">Instalaciones Certificadas y Garantizadas</h3>
+              <p class="about-feature__desc">Trabajamos bajo normas internacionales de cableado, configuración de seguridad y buenas prácticas de desarrollo.</p>
+            </div>
+          </div>
+
+          <div class="about-feature">
+            <div class="about-feature__icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <div>
+              <h3 class="about-feature__title">Acompañamiento y Soporte Post-Venta</h3>
+              <p class="about-feature__desc">Mantenemos canales abiertos de atención y soporte preventivo para garantizar que todo funcione sin interrupciones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__sidebar">
+        <div class="about-card">
+          <div class="about-card__header">
+            <span class="about-card__badge">Valores Institucionales</span>
+            <h3 class="about-card__title">¿Por qué confiar en CorePalm Soluciones?</h3>
+          </div>
+          <ul class="about-card__list">
+            <li>
+              <div class="check-icon">✓</div>
+              <div>
+                <strong>Transparencia Absoluta:</strong> Presupuestos detallados sin cobros ocultos ni sorpresas.
+              </div>
+            </li>
+            <li>
+              <div class="check-icon">✓</div>
+              <div>
+                <strong>Capacidad Multidisciplinaria:</strong> Resolvemos desde un problema de hardware puntual hasta un despliegue completo de red y software.
+              </div>
+            </li>
+            <li>
+              <div class="check-icon">✓</div>
+              <div>
+                <strong>Tiempos de Entrega Cumplidos:</strong> Planificación seria de hitos y cumplimiento riguroso de fechas.
+              </div>
+            </li>
+            <li>
+              <div class="check-icon">✓</div>
+              <div>
+                <strong>Equipamiento de Primer Nivel:</strong> Trabajamos exclusivamente con marcas reconocidas y estándares probados.
+              </div>
+            </li>
+          </ul>
+
+          <div class="about-card__cta">
+            <p>¿Tienes un proyecto en mente o necesitas asesoría técnica?</p>
+            <a href="#cotizacion" class="btn btn--primary btn--block">Hablar con un Especialista</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .about__grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-12);
+    align-items: flex-start;
+  }
+
+  .about__lead {
+    font-size: 1.12rem;
+    color: var(--color-dark-800);
+    line-height: 1.65;
+    margin-bottom: var(--space-4);
+  }
+
+  .about__text {
+    font-size: 1rem;
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-8);
+  }
+
+  .about__features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .about-feature {
+    display: flex;
+    gap: var(--space-4);
+    align-items: flex-start;
+  }
+
+  .about-feature__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-primary-50);
+    color: var(--color-primary-600);
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+    border: 1px solid var(--color-primary-100);
+  }
+
+  .about-feature__title {
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .about-feature__desc {
+    font-size: 0.92rem;
+    color: var(--color-gray-600);
+    margin: 0;
+  }
+
+  .about-card {
+    background-color: var(--color-gray-50);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+  }
+
+  .about-card__header {
+    margin-bottom: var(--space-6);
+  }
+
+  .about-card__badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-primary-600);
+    margin-bottom: var(--space-2);
+  }
+
+  .about-card__title {
+    font-size: 1.35rem;
+  }
+
+  .about-card__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+  }
+
+  .about-card__list li {
+    display: flex;
+    gap: var(--space-3);
+    align-items: flex-start;
+    font-size: 0.92rem;
+    color: var(--color-gray-600);
+  }
+
+  .check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background-color: var(--color-accent-emerald);
+    color: var(--color-white);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .about-card__cta {
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-gray-200);
+    text-align: center;
+  }
+
+  .about-card__cta p {
+    font-size: 0.88rem;
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-4);
+  }
+
+  @media (max-width: 1024px) {
+    .about__grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+  }
+</style>
