@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://corepalm.com/sitemap-index.xml

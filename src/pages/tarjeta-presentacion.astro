@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tarjeta de Presentación | CorePalm Soluciones</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/favicon.svg`} />
   
   <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -617,7 +617,7 @@
         <span>Imprimir / PDF</span>
       </button>
 
-      <a href="/" class="btn btn--secondary">
+      <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/`} class="btn btn--secondary">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
           <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -805,7 +805,7 @@
   <div class="mockup-container">
     <div class="mockup-header">
       <h2 class="mockup-title">📸 Mockup Fotográfico de Presentación (JPG)</h2>
-      <a href="/tarjeta-presentacion.jpg" download="tarjeta-corepalm-mockup.jpg" class="btn btn--primary">
+      <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/tarjeta-presentacion.jpg`} download="tarjeta-corepalm-mockup.jpg" class="btn btn--primary">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
           <polyline points="7 10 12 15 17 10"></polyline>
@@ -814,7 +814,7 @@
         <span>Descargar Imagen Mockup (JPG)</span>
       </a>
     </div>
-    <img src="/tarjeta-presentacion.jpg" alt="Mockup Tarjeta de Presentación CorePalm Soluciones" class="mockup-img" />
+    <img src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/tarjeta-presentacion.jpg`} alt="Mockup Tarjeta de Presentación CorePalm Soluciones" class="mockup-img" />
   </div>
 
   <script>
