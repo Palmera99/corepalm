@@ -1,5 +1,4 @@
 # Build & Distribution outputs
-dist/
 .astro/
 
 # Dependency directories
